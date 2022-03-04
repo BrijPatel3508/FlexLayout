@@ -1,0 +1,261 @@
+<div class="dashboard-container">
+  <h2 class="mb-0"><b>Dashboard</b></h2>
+  <div>Today is {{date | date: 'full'}}</div>
+  <div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutAlign="space-between center">
+    <div fxFlex.gt-md="20" fxFlex="45" fxFlex.lt-sm="100" class="widgets_div card mt-1 p-1">
+      <mat-icon style="color: green;">shopping_cart</mat-icon>
+      <div class="text_div">
+        <span>Monthly Sales</span><br>
+        <span>2362</span>
+      </div>
+    </div>
+    <div fxFlex.gt-md="20" fxFlex="45" fxFlex.lt-sm="100" class="widgets_div card mt-1 p-1">
+      <mat-icon style="color: blue;">public</mat-icon>
+      <div class="text_div">
+        <span>Monthly Visits</span><br>
+        <span>687,123</span>
+      </div>
+    </div>
+    <div fxFlex.gt-md="20" fxFlex="45" fxFlex.lt-sm="100" class="widgets_div card mt-1 p-1">
+      <mat-icon style="color: red;">card_giftcard</mat-icon>
+      <div class="text_div">
+        <span>Products</span><br>
+        <span>985</span>
+      </div>
+    </div>
+    <div fxFlex.gt-md="20" fxFlex="45" fxFlex.lt-sm="100" class="widgets_div card mt-1 p-1">
+      <mat-icon style="color: orange;">people</mat-icon>
+      <div class="text_div">
+        <span>Users</span><br>
+        <span>105,652</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-1 w-100 card">
+    <div class="p-1">Statistics
+      <span class="float-right">show stats <mat-slide-toggle></mat-slide-toggle></span>
+    </div>
+    <hr class="m-0">
+    <div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutAlign="space-between center">
+      <img width="100%" src="../assets/Capture.PNG" fxFlex="70" fxFlex.lt-sm="100">
+      <div fxFlex="30" fxFlex.lt-sm="100">
+        <table>
+          <tr>
+            <td>Total Sales</td>
+            <td>10,332<sup class="text-success"> +12% </sup></td>
+          </tr>
+          <tr>
+            <td>Income Amout</td>
+            <td>$1,534<sup class="text-error"> -5%</sup></td>
+          </tr>
+          <tr>
+            <td>Total Budget</td>
+            <td>$10,534<sup class="text-success"> +12% </sup></td>
+          </tr>
+          <tr>
+            <td>Page Views</td>
+            <td>21,332<sup class="text-error"> +12% </sup></td>
+          </tr>
+          <tr>
+            <td>Completed Tasks</td>
+            <td>12<sup class="text-success"> +12% </sup></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutAlign="space-between start">
+    <div fxFlex.gt-md="30" fxFlex="48" fxFlex.lt-sm="100" class="widgets_div card mt-1">
+      <div class="p-1">Sales</div>
+      <img width="100%" src="../assets/sales.PNG">
+      <hr class="m-0">
+      <div fxLayout="row">
+        <div fxFlex="50" class="text-center">
+          Target<br>500
+        </div>
+        <div fxFlex="50" class="text-center">
+          Current<br>421
+        </div>
+      </div>
+    </div>
+    <div fxFlex.gt-md="30" fxFlex="48" fxFlex.lt-sm="100" class="widgets_div card mt-1">
+      <div class="p-1 pb-0">Total Revenue
+        <span class="text-success float-right">+12%</span>
+      </div>
+      <h2 class="p-1 pt-0 m-0">$1,534</h2>
+      <img width="100%" src="../assets/totalRevenue.PNG">
+    </div>
+    <div fxFlex.gt-md="30" fxFlex="48" fxFlex.lt-sm="100" class="widgets_div card mt-1">
+      <div class="float-right p-1">Aug 2017 - Feb 2018</div>
+      <img width="100%" src="../assets/visitors.PNG">
+      <hr class="m-0">
+      <div class="p-1 pb-0">Unique Visitors
+        <span class="text-success float-right">
+          <mat-icon>loop</mat-icon>
+        </span>
+      </div>
+    </div>
+    <div fxFlex.gt-md="20" fxFlex="48" fxFlex.lt-sm="100" class="widgets_div card mt-1">
+      <div class="p-1" style="background-color: #02BC77; color: white;">
+        Revenue
+      </div>
+      <img width="100%" src="../assets/revenue.PNG">
+      <div fxLayout="row">
+        <div fxFlex="50" class="text-center">
+          Target<br>500
+        </div>
+        <div fxFlex="50" class="text-center">
+          Current<br>421
+        </div>
+      </div>
+    </div>
+    <div fxFlex.gt-md="35" fxFlex="48" fxFlex.lt-sm="100" class="widgets_div card mt-1">
+      <div class="p-1">Tasks
+        <span class="float-right border-1">
+          Show More
+        </span>
+      </div>
+      <hr class="m-0">
+      <div class="p-1">
+        <mat-checkbox class="d-block">Buy Products</mat-checkbox>
+        <mat-checkbox class="d-block">Reply to emails</mat-checkbox>
+        <mat-checkbox class="d-block">write blog post</mat-checkbox>
+        <mat-checkbox class="d-block" disabled [checked]="true"><s>wash my car</s></mat-checkbox>
+      </div>
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label>Type Your Task</mat-label>
+        <input matInput type="text">
+        <button mat-icon-button matSuffix>
+          ADD
+        </button>
+      </mat-form-field>
+    </div>
+    <div fxFlex.gt-md="35" fxFlex="48" fxFlex.lt-sm="100" class="widgets_div card mt-1">
+      <div class="p-1">Teams TODO
+        <span class="float-right border-1">
+          Show More
+        </span>
+      </div>
+      <hr class="m-0">
+      <div class="p-1">
+        <div class="card mt-1 p-1">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        </div>
+        <div class="card mt-1 p-1">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        </div>
+      </div>
+      <hr class="m-0">
+    </div>
+    <div fxFlex.gt-md="65" fxFlex="65" fxFlex.lt-sm="100" class="widgets_div card mt-1">
+      <div class="p-1">Sales Stats
+        <span class="float-right border-1">
+          Show More
+        </span>
+      </div>
+      <hr class="m-0">
+      <table class="w-100 sales-table">
+        <tr>
+          <th>Dates</th>
+          <th>Sales</th>
+          <th>Cancelled</th>
+          <th>Delivered</th>
+        </tr>
+        <tr>
+          <td>02/08/2018</td>
+          <td>12</td>
+          <td>1</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>02/07/2018</td>
+          <td>16</td>
+          <td>2</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>02/06/2018</td>
+          <td>5</td>
+          <td>0</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>02/05/2018</td>
+          <td>21</td>
+          <td>1</td>
+          <td>10</td>
+        </tr>
+      </table>
+    </div>
+    <div fxFlex.gt-md="30" fxFlex="30" fxFlex.lt-sm="100" class="widgets_div card mt-1">
+      <div class="p-1">Type Gadgets
+        <span class="text-success float-right">
+          <mat-icon>loop</mat-icon>
+        </span>
+      </div>
+      <hr class="m-0">
+      <img width="100%" src="../assets/typeGadget.PNG">
+    </div>
+    <div fxFlex.gt-md="60" fxFlex="48" fxFlex.lt-sm="100" class="widgets_div card mt-1">
+      <div class="p-1">Comments</div>
+      <hr class="m-0">
+      <div class="p-1">
+        <mat-icon>home</mat-icon>
+        <div class="text_div">
+          <span><span class="text-info">Amanda Warner</span> commented on <span class="text-info">Article
+              Name</span></span><br>
+          <br>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
+          <span class="text-disabled">2 hours ago</span>
+        </div>
+      </div>
+      <div class="p-1">
+        <mat-icon>home</mat-icon>
+        <div class="text_div">
+          <span><span class="text-info">Amanda Warner</span> commented on <span class="text-info">Article
+              Name</span></span><br>
+          <br>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
+          <span class="text-disabled">2 hours ago</span>
+        </div>
+      </div>
+      <div class="p-1">
+        <mat-icon>home</mat-icon>
+        <div class="text_div">
+          <span><span class="text-info">Amanda Warner</span> commented on <span class="text-info">Article
+              Name</span></span><br>
+          <br>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
+          <span class="text-disabled">2 hours ago</span>
+        </div>
+      </div>
+      <hr class="m-0">
+      <div class="text-center p-1"> Show More </div>
+    </div>
+    <div fxFlex.gt-md="35" fxFlex="48" fxFlex.lt-sm="100" class="widgets_div card mt-1">
+      <div class="p-1">Support Tickets</div>
+      <hr class="m-0">
+      <div class="p-1">
+        <span class="text-info">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </span>
+        <span class="text-disabled"> #34563 </span><br>
+        <span class="text-disabled"> Created By </span> Mike Greene - <span class="text-disabled"> 1 hour ago </span>
+      </div>
+      <div class="p-1">
+        <span class="text-info">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </span>
+        <span class="text-disabled"> #34563 </span><br>
+        <span class="text-disabled"> Created By </span> Mike Greene - <span class="text-disabled"> 1 hour ago </span>
+      </div>
+      <div class="p-1">
+        <span class="text-info">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </span>
+        <span class="text-disabled"> #34563 </span><br>
+        <span class="text-disabled"> Created By </span> Mike Greene - <span class="text-disabled"> 1 hour ago </span>
+      </div>
+      <div class="p-1">
+        <span class="text-info">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </span>
+        <span class="text-disabled"> #34563 </span><br>
+        <span class="text-disabled"> Created By </span> Mike Greene - <span class="text-disabled"> 1 hour ago </span>
+      </div>
+      <hr class="m-0">
+      <div class="text-center p-1"> Show More </div>
+    </div>
+  </div>
+</div>
